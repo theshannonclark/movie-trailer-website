@@ -1,4 +1,8 @@
+# Custom folder attributes in Mac OS X
 .DS_Store
+
+# The automatically generated page
+fresh_tomatoes.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
