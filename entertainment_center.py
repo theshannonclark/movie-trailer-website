@@ -1,6 +1,17 @@
 import media
 import lib.fresh_tomatoes as ft
 
+
+# Styles and scripting for the page
+main_page_head = ft.read_template_file("templates/header_partial.html")
+
+# The main page layout and title bar
+main_page_content = ft.read_template_file("templates/content_partial.html")
+
+# A single movie entry html template
+movie_tile_content = ft.read_template_file("templates/movie_partial.html")
+
+
 # Store movie data
 # todo: update to use xml
 movies = [
@@ -23,4 +34,7 @@ movies = [
 
 # Write movies out to a html document
 # and display it in the browser.
-ft.open_movies_page(movies)
+ft.open_movies_page(movies,
+                    main_page_head,
+                    main_page_content,
+                    movie_tile_content)
