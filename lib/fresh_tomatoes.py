@@ -9,10 +9,14 @@ main_page_head = ""
 # The main page layout and title bar
 main_page_content = ""
 
-
 # A single movie entry html template
 movie_tile_content = ""
 
+def read_template_file(path):
+    result = ""
+    with open(path, "r") as f:
+        result = f.read()
+    return result
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
