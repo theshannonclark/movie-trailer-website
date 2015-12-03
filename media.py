@@ -16,6 +16,24 @@ class MovieEssence():
     def set_trailer_youtube_url(youtube_url):
         self.trailer_youtube_url = youtube_url
 
+    def is_valid():
+        result = True
+        if !is_valid_string(self.title):
+            result = False
+        if !is_valid_string(self.poster_image_url):
+            result = False
+        if !is_valid_string(self.trailer_youtube_url):
+            result = False
+
+        return result
+
+    def is_valid_string(string):
+        return (type(string) is str) and (len(string) > 0)
+
+    def get_movie():
+        if self.is_valid():
+            return Movie(self)
+
 class Movie():
     
     def __init__(self, movie_essence):
