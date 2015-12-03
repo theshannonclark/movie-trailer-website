@@ -3,17 +3,6 @@ import os
 import re
 
 
-
-# Styles and scripting for the page
-main_page_head = read_template_file("templates/header_partial.html")
-
-# The main page layout and title bar
-main_page_content = read_template_file("templates/content_partial.html")
-
-# A single movie entry html template
-movie_tile_content = read_template_file("templates/movie.html")
-
-
 def read_template_file(path):
     result = ""
     with open(path, "r") as f:
@@ -21,7 +10,7 @@ def read_template_file(path):
     return result
 
 
-def create_movie_tiles_content(movies):
+def create_movie_tiles_content(movies, movie_tpl):
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -34,7 +23,7 @@ def create_movie_tiles_content(movies):
                               else None)
 
         # Append the tile for the movie with its content filled in
-        content += movie_tile_content.format(
+        content += movie_tpl.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
@@ -42,16 +31,16 @@ def create_movie_tiles_content(movies):
     return content
 
 
-def open_movies_page(movies):
+def open_movies_page(movies, head_tpl, content_tpl, movie_tpl):
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
     # Replace the movie tiles placeholder generated content
-    rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
+    rendered_content = content_tpl.format(
+        movie_tiles=create_movie_tiles_content(movies, movie_tpl))
 
     # Output the file
-    output_file.write(main_page_head + rendered_content)
+    output_file.write(head_tpl + rendered_content)
     output_file.close()
 
     # open the output file in the browser (in a new tab, if possible)
