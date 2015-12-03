@@ -3,20 +3,23 @@ import os
 import re
 
 
+
 # Styles and scripting for the page
-main_page_head = ""
+main_page_head = read_template_file("templates/header_partial.html")
 
 # The main page layout and title bar
-main_page_content = ""
+main_page_content = read_template_file("templates/content_partial.html")
 
 # A single movie entry html template
-movie_tile_content = ""
+movie_tile_content = read_template_file("templates/movie.html")
+
 
 def read_template_file(path):
     result = ""
     with open(path, "r") as f:
         result = f.read()
     return result
+
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
