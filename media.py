@@ -7,14 +7,17 @@ class MovieEssence():
         self.poster_image_url = ""
         self.trailer_youtube_url = ""
 
-    def set_titles(new_title):
+    def set_title(new_title):
         self.title = new_title
+        return self
 
     def set_poster_image_url(poster_image_url):
         self.poster_image_url = poster_image_url
+        return self
 
     def set_trailer_youtube_url(youtube_url):
         self.trailer_youtube_url = youtube_url
+        return self
 
     def is_valid():
         result = True
