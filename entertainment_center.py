@@ -30,7 +30,7 @@ movies = [
     media.Movie("The Fountain",
                 "http://ia.media-imdb.com/images/M/MV5BMTU5OTczMTcxMV5BMl5BanBnXkFtZTcwNDg3MTEzMw@@._V1_SY317_CR0,0,214,317_AL_.jpg",
                 "https://www.youtube.com/watch?v=dAuxryJ6pv8")
-    ]
+]
 
 # Write movies out to a html document
 # and display it in the browser.
