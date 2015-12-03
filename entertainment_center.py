@@ -9,7 +9,7 @@ main_page_head = ft.read_template_file("templates/header_partial.html")
 main_page_content = ft.read_template_file("templates/content_partial.html")
 
 # A single movie entry html template
-movie_tile_content = ft.read_template_file("templates/movie.html")
+movie_tile_content = ft.read_template_file("templates/movie_partial.html")
 
 
 # Store movie data
