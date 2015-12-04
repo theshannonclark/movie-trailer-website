@@ -31,7 +31,7 @@ class MovieEssence():
         return result
 
     def is_valid_string(self, string):
-        return (type(string) is str) and (len(string) > 0)
+        return (type(string) is unicode) and (len(string) > 0)
 
     def get_movie(self):
         if self.is_valid():
