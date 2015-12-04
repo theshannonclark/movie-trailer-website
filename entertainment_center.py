@@ -1,6 +1,6 @@
 import media
 import lib.fresh_tomatoes as ft
-from xml.dom import minidom
+import lib.movie_io as movie_io
 
 
 # Styles and scripting for the page
@@ -12,11 +12,9 @@ main_page_content = ft.read_template_file("templates/content_partial.html")
 # A single movie entry html template
 movie_tile_content = ft.read_template_file("templates/movie_partial.html")
 
-
 movies = []
 
-movie_data = minidom.parse("data/movie_data.xml")
-movie_list = movie_data.getElementsByTagName("movie")
+movie_list = movie_io.get_movies("data/movie_data.xml")
 for movie in movie_list:
     title_node = movie.getElementsByTagName("title")[0]
     title = title_node.childNodes[0].nodeValue
