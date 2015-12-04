@@ -1,6 +1,6 @@
 import media
 import lib.fresh_tomatoes as ft
-import lib.movie_io as movie_io
+import lib.movie_xml as movie_xml
 
 
 # Styles and scripting for the page
@@ -14,22 +14,14 @@ movie_tile_content = ft.read_template_file("templates/movie_partial.html")
 
 movies = []
 
-movie_list = movie_io.get_movies("data/movie_data.xml")
+movie_list = movie_xml.get_movies("data/movie_data.xml")
 for movie in movie_list:
-    title_node = movie.getElementsByTagName("title")[0]
-    title = title_node.childNodes[0].nodeValue
-
-    poster_image_node = movie.getElementsByTagName("poster-image-url")[0]
-    poster_image = poster_image_node.childNodes[0].nodeValue
-
-    youtube_trailer_node = movie.getElementsByTagName("youtube-trailer-url")[0]
-    youtube_trailer = youtube_trailer_node.childNodes[0].nodeValue
-
+    movie_data = movie_xml.get_movie_data(movie)
     movies.append(
         media.MovieEssence()
-        .set_title(title)
-        .set_poster_image_url(poster_image)
-        .set_trailer_youtube_url(youtube_trailer)
+        .set_title(movie_data["title"])
+        .set_poster_image_url(movie_data["poster_image"])
+        .set_trailer_youtube_url(movie_data["youtube_trailer"])
         .get_movie()
     )
 
