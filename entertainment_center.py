@@ -22,6 +22,7 @@ for movie in movie_list:
         .set_title(movie_data["title"])
         .set_poster_image_url(movie_data["poster_image"])
         .set_trailer_youtube_url(movie_data["youtube_trailer"])
+        .set_release_year(movie_data["release_year"])
         .get_movie()
     )
 

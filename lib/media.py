@@ -1,11 +1,12 @@
-import lib.fresh_tomatoes as ft
+import fresh_tomatoes as ft
 
 class MovieEssence():
 
     def __init__(self):
-        self.title = ""
-        self.poster_image_url = ""
-        self.trailer_youtube_url = ""
+        self.title = u""
+        self.release_year = u""
+        self.poster_image_url = u""
+        self.trailer_youtube_url = u""
 
     def set_title(self, new_title):
         self.title = new_title
@@ -19,6 +20,10 @@ class MovieEssence():
         self.trailer_youtube_url = youtube_url
         return self
 
+    def set_release_year(self, year):
+        self.release_year = year
+        return self
+
     def is_valid(self):
         result = True
         if not self.is_valid_string(self.title):
@@ -26,6 +31,8 @@ class MovieEssence():
         if not self.is_valid_string(self.poster_image_url):
             result = False
         if not self.is_valid_string(self.trailer_youtube_url):
+            result = False
+        if not self.is_valid_string(self.release_year):
             result = False
 
         return result
@@ -43,4 +50,5 @@ class Movie():
         self.title = movie_essence.title
         self.poster_image_url = movie_essence.poster_image_url
         self.trailer_youtube_url = movie_essence.trailer_youtube_url
+        self.release_year = movie_essence.release_year
 

@@ -26,7 +26,8 @@ def create_movie_tiles_content(movies, movie_tpl):
         content += movie_tpl.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            release_year=movie.release_year
         )
     return content
 
