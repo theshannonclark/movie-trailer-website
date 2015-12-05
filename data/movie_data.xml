@@ -4,5 +4,20 @@
     <title>Primer</title>
     <poster-image-url>http://ia.media-imdb.com/images/M/MV5BMTgwNjY5MDkzOF5BMl5BanBnXkFtZTcwOTAxMTcyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg</poster-image-url>
     <youtube-trailer-url>https://www.youtube.com/watch?v=3nj5MMURCm8</youtube-trailer-url>
+    <release-year>2004</release-year>
+    <director>Shane Carruth</director>
+    <runtime>77 min</runtime>
+    <rating>PG-13</rating>
+    <genres>
+      <genre>Drama</genre>
+      <genre>Sci-Fi</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <imdb-rating>7.0</imdb-rating>
+    <cast>
+      <actor>Shane Carruth</actor>
+      <actor>David Sullivan</actor>
+      <actor>Casey Gooden</actor>
+    </cast>
   </movie>
 </movies>
