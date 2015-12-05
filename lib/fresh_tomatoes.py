@@ -4,6 +4,15 @@ import re
 
 
 def read_template_file(path):
+    """Read the specified file
+
+    Arguments:
+        path: File path
+
+    Returns:
+        The contents of the file
+    """
+
     result = ""
     with open(path, "r") as f:
         result = f.read()
@@ -11,6 +20,16 @@ def read_template_file(path):
 
 
 def create_movie_tiles_content(movies, movie_tpl):
+    """Creates an HTML div with the movies' details
+
+    Arguments:
+        movies: A list of Movie objects
+        movie_tpl: An html template for Movies
+
+    Returns:
+        A HTML snippet with movie details inserted
+    """
+
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -33,6 +52,18 @@ def create_movie_tiles_content(movies, movie_tpl):
 
 
 def open_movies_page(movies, head_tpl, content_tpl, movie_tpl):
+    """Create the movies HTML document, and open it in the browser
+
+    Arguments:
+        movies: A list of Movie objects
+        head_tpl: A template for the head of the document
+        content_tpl: A template for the main content of the document
+        movie_tpl: An html template for Movies
+
+    Returns:
+        None
+    """
+
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
