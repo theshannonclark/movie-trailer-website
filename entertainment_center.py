@@ -1,4 +1,4 @@
-import media
+import lib.media as media
 import lib.fresh_tomatoes as ft
 import lib.movie_xml as movie_xml
 
