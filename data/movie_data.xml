@@ -20,4 +20,61 @@
       <actor>Casey Gooden</actor>
     </cast>
   </movie>
+  <movie>
+    <title>Melancholia</title>
+    <poster-image-url>http://ia.media-imdb.com/images/M/MV5BMTk4NjM0MjI3MV5BMl5BanBnXkFtZTcwNjcxMDYzNg@@._V1_SX214_AL_.jpg</poster-image-url>
+    <youtube-trailer-url>https://www.youtube.com/watch?v=wzD0U841LRM</youtube-trailer-url>
+    <release-year>2011</release-year>
+    <director>Lars von Trier</director>
+    <runtime>130 min</runtime>
+    <rating>R</rating>
+    <genres>
+      <genre>Drama</genre>
+      <genre>Sci-Fi</genre>
+    </genres>
+    <imdb-rating>7.1</imdb-rating>
+    <cast>
+      <actor>Kirsten Dunst</actor>
+      <actor>Charlotte Gainsbourg</actor>
+      <actor>Kiefer Sutherland</actor>
+    </cast>
+  </movie>
+  <movie>
+    <title>Memento</title>
+    <poster-image-url>http://ia.media-imdb.com/images/M/MV5BMTc4MjUxNDAwN15BMl5BanBnXkFtZTcwMDMwNDg3OA@@._V1_SY317_CR12,0,214,317_AL_.jpg</poster-image-url>
+    <youtube-trailer-url>https://www.youtube.com/watch?v=0vS0E9bBSL0</youtube-trailer-url>
+    <release-year>2000</release-year>
+    <director>Christopher Nolan</director>
+    <runtime>113 min</runtime>
+    <rating>R</rating>
+    <genres>
+      <genre>Mystery</genre>
+      <genre>Thriller</genre>
+    </genres>
+    <imdb-rating>8.5</imdb-rating>
+    <cast>
+      <actor>Guy Pearce</actor>
+      <actor>Carrie-Anne Moss</actor>
+      <actor>Joe Pantoliano</actor>
+    </cast>
+  </movie>
+  <movie>
+    <title>Pulp Fiction</title>
+    <poster-image-url>http://ia.media-imdb.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SX214_AL_.jpg</poster-image-url>
+    <youtube-trailer-url>https://www.youtube.com/watch?v=wZBfmBvvotE</youtube-trailer-url>
+    <release-year>1994</release-year>
+    <director>Quentin Tarantino</director>
+    <runtime>154 min</runtime>
+    <rating>R</rating>
+    <genres>
+      <genre>Drama</genre>
+      <genre>Crime</genre>
+    </genres>
+    <imdb-rating>8.9</imdb-rating>
+    <cast>
+      <actor>John Travolta</actor>
+      <actor>Uma Thurman</actor>
+      <actor>Samuel L. Jackson</actor>
+    </cast>
+  </movie>
 </movies>
